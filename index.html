@@ -164,6 +164,12 @@ footer {
 
 <body>
 
+  <audio id="miCancion" preload="auto">
+  <source
+    src="./Ahí Viene, Ahí Va - Silvestre Dangond Y Juancho De La Espriella (con Letra) By Eusebio - Vallenato Para El Mundo.mp3"
+    type="audio/mpeg">
+</audio>
+
 <!-- PORTADA -->
 <section class="hero">
   <div class="heart">❤️</div>
@@ -259,28 +265,25 @@ const fechaInicio = new Date("2024-09-22T19:42:00");
 
 function abrirRegalo() {
 
-  window.abrirRegalo = function() {
-
   const contenido = document.getElementById("contenido");
   const cancion = document.getElementById("miCancion");
 
   // Mostrar el regalo
   contenido.classList.remove("hidden");
 
-  // Reproducir la canción
+  // Reproducir música
   cancion.volume = 1;
 
   cancion.play().catch(error => {
-    console.error("Error al reproducir:", error);
-    alert("No se pudo reproducir la canción. Verifica el archivo MP3.");
+    console.error("Error de reproducción:", error);
+    alert("No se pudo reproducir la canción. Comprueba el archivo MP3.");
   });
 
-  // Desplazamiento hacia el regalo
+  // Desplazamiento suave
   contenido.scrollIntoView({
     behavior: "smooth"
   });
 
-};
 }
 
 // CONTADOR
