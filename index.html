@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para el amor de mi vida ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #fff0f3;
+  color: #5c2638;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg,#ffb6c8,#ffe0e8,#fff0f3);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: clamp(38px,8vw,65px);
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.heart {
+  font-size: 75px;
+  animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+button {
+  border: none;
+  padding: 15px 28px;
+  border-radius: 30px;
+  background: #d6336c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.06);
+  background: #ad2453;
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #b52c5b;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.card {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px #d6336c20;
+  line-height: 1.9;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+  gap: 15px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px #0002;
+}
+
+.timeline {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.event {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 5px solid #e75480;
+  border-radius: 10px;
+  line-height: 1.7;
+}
+
+.counter {
+  font-size: 25px;
+  color: #d6336c;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+footer {
+  padding: 40px 20px;
+  background: #d6336c;
+  color: white;
+  text-align: center;
+  line-height: 2;
+}
+
+.heart-float {
+  position: fixed;
+  bottom: -30px;
+  animation: floatUp 7s linear forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+<section class="hero">
+  <div class="heart">❤️</div>
+  <p>Un pequeño regalo para alguien muy especial...</p>
+  <h1>Para ti, mi amor</h1>
+  <p>
+    Porque hay personas que llegan a nuestra vida
+    y la hacen mucho más bonita. Tú eres esa persona.
+  </p>
+  <button type="button" onclick="abrirRegalo()">
+    Abrir mi regalo 💌
+  </button>
+</section>
+
+<div id="contenido" class="hidden">
+
+  <audio id="miCancion" preload="auto">
+  <source src="https://github.com/vDeLaHoz/Music/blob/main/Ah%C3%AD%20Viene%2C%20Ah%C3%AD%20Va%20-%20Silvestre%20Dangond%20Y%20Juancho%20De%20La%20Espriella%20(con%20Letra)%20By%20Eusebio%20-%20Vallenato%20Para%20El%20Mundo.mp3" type="audio/mpeg">
+</audio>
+
+<!-- CONTADOR -->
+<section>
+  <h2>Nuestra historia ❤️</h2>
+  <p class="subtitle">
+    Cada segundo contigo es un regalo.
+  </p>
+  <div class="card">
+    <p>Desde aquel día tan especial han pasado...</p>
+    <div class="counter" id="contador"></div>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section>
+  <h2>Una carta para ti 💌</h2>
+  <div class="card">
+    <p id="carta">
+      Mi amor, hoy en este día tan especial me alegra inmensamente el poder una vez más  felicitarte y desearte un feliz cumpleaños, me emociona muchísimo la idea de poder seguir compartiendo estos momentos juntos y que se sigan repitiendo cada año, no me queda más que agradecer a Dios y a la vida por permitirme encontrar con una mujer como tu en mi camino, una así como siempre la soñé, con este detalle quisiera demostrarte un poco todo el amor que siento por ti, solo un poco porque todo no hay espacio suficiente en el que quepa, sin más que decir mi amor te deseo un feliz cumpleaños y que sigas cumpliendo muchos años más junto ami, gracias por tanto y perdon por tan poco 🥰😘🤍
+    </p>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section>
+  <h2>Nuestros recuerdos 📸</h2>
+  <p class="subtitle">
+    Algunos momentos que siempre guardaré en mi corazón.
+  </p>
+
+  <div class="gallery">
+    <img src="https://1drv.ms/i/c/149434b72b5e9737/IQQEIvn2pj74RpyWfYVJaij5AfEJ67XUVwWd0Tq5g-AFrAE" alt="Nuestro recuerdo 1">
+    <img src="https://1drv.ms/i/c/149434b72b5e9737/IQTPY_AvGGP8R4a_kwlSUshVAd2Rs6n3jLkXf3ye7ZZQpJs?width=1280&height=960" alt="Nuestro recuerdo 2">
+    <img src="https://1drv.ms/i/c/149434b72b5e9737/IQRp0J0CMhhuT486TNOj6IKRAfoP4AfugIqZIs5UF8XxaTc?width=586&height=780" alt="Nuestro recuerdo 3">
+    <img src="https://1drv.ms/i/c/149434b72b5e9737/IQThrsYugTDsQK_Q_3K8ZuiJAbUC31LCHZkapWnAm2cX7pc?width=960&height=1280" alt="Nuestro recuerdo 4">
+  </div>
+</section>
+
+
+<!-- FINAL -->
+<section>
+  <div class="heart">💗</div>
+  <h2>Y si tuviera que elegir...</h2>
+
+  <div class="card">
+    <p>
+      Te elegiría a ti.
+
+      En los días buenos, en los difíciles,
+      en las aventuras y en los días tranquilos.
+
+      Gracias por existir y por permitirme
+      compartir una parte de mi vida contigo.
+
+      <br><br>
+      <strong>Te amo, hoy y siempre. ❤️</strong>
+    </p>
+  </div>
+</section>
+
+<footer>
+  Hecho con muchísimo amor, solamente para ti. ❤️
+  <br>
+  Siempre tuyo.
+</footer>
+
+</div>
+
+<script>
+
+// CAMBIA ESTA FECHA POR LA FECHA EN QUE COMENZARON
+
+const fechaInicio = new Date("2024-09-22T19:42:00");
+
+function abrirRegalo() {
+
+  window.abrirRegalo = function() {
+
+  const contenido = document.getElementById("contenido");
+  const cancion = document.getElementById("miCancion");
+
+  // Mostrar el regalo
+  contenido.classList.remove("hidden");
+
+  // Reproducir la canción
+  cancion.volume = 1;
+
+  cancion.play().catch(error => {
+    console.error("Error al reproducir:", error);
+    alert("No se pudo reproducir la canción. Verifica el archivo MP3.");
+  });
+
+  // Desplazamiento hacia el regalo
+  contenido.scrollIntoView({
+    behavior: "smooth"
+  });
+
+};
+}
+
+// CONTADOR
+function actualizarContador() {
+  const ahora = new Date();
+  const diferencia = ahora - fechaInicio;
+
+  const dias = Math.floor(diferencia / 86400000);
+  const horas = Math.floor((diferencia / 3600000) % 24);
+  const minutos = Math.floor((diferencia / 60000) % 60);
+  const segundos = Math.floor((diferencia / 1000) % 60);
+
+  document.getElementById("contador").innerHTML =
+    `${dias} días, ${horas} horas,<br>
+    ${minutos} minutos y ${segundos} segundos`;
+}
+
+setInterval(actualizarContador, 1000);
+actualizarContador();
+
+// CORAZONES FLOTANTES
+function crearCorazon() {
+  const heart = document.createElement("div");
+  heart.className = "heart-float";
+  heart.innerHTML = ["❤️", "💕", "💗", "💖"][
+    Math.floor(Math.random() * 4)
+  ];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 25) + "px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(crearCorazon, 800);
+
+
+</script>
+
+</body>
+</html>
